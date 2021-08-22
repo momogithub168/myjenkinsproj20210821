@@ -8,6 +8,7 @@ package test.com;
 import com.itexps.myjava20210821.Student;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -64,5 +65,10 @@ public class StudentTest {
     public void testForth() {
         stu.setlName("Li");
         assertEquals("Li", stu.getlName());
+    }
+    
+        @Test
+    public void testFifth() {
+        Assert.assertNotEquals("Li", stu.toString());
     }
 }
