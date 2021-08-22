@@ -62,7 +62,7 @@ public class StudentTest {
 
     @Test
     public void testForth() {
-        stu.setfName("Li");
+        stu.setlName("Li");
         assertEquals("Li", stu.getlName());
     }
 }
