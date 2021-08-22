@@ -5,9 +5,7 @@ package test.com;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 import com.itexps.myjava20210821.Student;
-import junit.framework.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -20,24 +18,25 @@ import static org.junit.Assert.*;
  * @author jmowa
  */
 public class StudentTest {
+
     Student stu;
-    
+
     public StudentTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         stu = new Student("Smith", "White");
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -47,6 +46,23 @@ public class StudentTest {
     //
     @Test
     public void testFirst() {
-    Assert.assertEquals("Smith", stu.getfName());
+        assertEquals("Smith", stu.getfName());
+    }
+
+    @Test
+    public void testSecond() {
+        assertEquals("White", stu.getlName());
+    }
+
+    @Test
+    public void testThird() {
+        stu.setfName("Anna");
+        assertEquals("Anna", stu.getfName());
+    }
+
+    @Test
+    public void testForth() {
+        stu.setfName("Li");
+        assertEquals("Li", stu.getlName());
     }
 }
